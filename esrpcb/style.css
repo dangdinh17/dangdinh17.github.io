@@ -174,32 +174,8 @@ h1 {
   font-weight: 500;
 }
 
-.hero-figure,
 .wide-figure {
   margin: 0;
-}
-
-.hero-figure {
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--surface);
-}
-
-.hero-figure img {
-  width: 100%;
-  max-height: 690px;
-  object-fit: contain;
-  border-radius: 10px;
-  background: #fff;
-}
-
-figcaption {
-  max-width: 900px;
-  margin: 12px auto 0;
-  color: var(--muted);
-  font-size: 0.86rem;
-  text-align: center;
 }
 
 .content-section {
@@ -326,7 +302,6 @@ footer p {
     padding-top: 48px;
   }
 
-  .hero-figure,
   .wide-figure {
     padding: 8px;
     border-radius: 10px;
