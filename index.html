@@ -1,177 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="dangbuidinh" />
-    <title id="title"></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of Dang Bui Dinh, a researcher in robotics, computer vision, and image enhancement.">
+  <meta name="author" content="Dang Bui Dinh">
+  <meta name="theme-color" content="#173b69">
+  <title>Dang Bui Dinh</title>
 
-    <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="docs/static/assets/favicon.ico" />
+  <link rel="icon" href="docs/static/assets/favicon.ico">
+  <link rel="stylesheet" href="stylesheet.css">
 
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
-
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link type="text/css" href="docs/static/css/core.css" rel="stylesheet" />
-    <link type="text/css" href="docs/static/css/main.css" rel="stylesheet" />
-
-    <!-- Bootstrap core JS-->
-    <script type="text/javascript" src="docs/static/js/bootstrap.bundle.min.js"></script>
-
-    <!-- For Compatability -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    
-    <!-- Markdown -->
-    <script type="text/javascript" src="docs/static/js/marked.min.js"></script>
-
-    <!-- Mathematics -->
-    <script>
-        // See https://docs.mathjax.org/en/latest/index.html for more details.
-        MathJax = {
-            tex: {
-                packages: {},              // extensions to use
-                inlineMath: [              // start/end delimiter pairs for in-line math
-                    ['$', '$'],
-                    ['\\(', '\\)']
-                ],
-                displayMath: [             // start/end delimiter pairs for display math
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ],
-                processEscapes: false,      // use \$ to produce a literal dollar sign
-                processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
-                processRefs: true,         // process \ref{...} outside of math mode
-                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,    // pattern for recognizing numbers
-                tags: 'all',              // or 'ams' or 'all'
-                tagSide: 'right',          // side for \tag macros
-                tagIndent: '0.8em',        // amount to indent tags
-                useLabelIds: true,         // use label name rather than tag for ids
-                maxMacros: 10000,          // maximum number of macro substitutions per expression
-                maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
-                // baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
-                // (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, ''),
-                formatError:               // function called when TeX syntax errors occur
-                    (jax, err) => jax.formatError(err)
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Core JS-->
-    <script type="text/javascript" src="docs/static/js/scripts.js"></script>
-    <script type="text/javascript" src="docs/static/js/js-yaml.min.js"></script>
-
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
-                    </li>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-                </ul>
-            </div>
+  <div class="site-shell">
+    <aside class="site-menu" aria-label="Primary navigation">
+      <a class="site-name" href="#home">Dang Bui Dinh</a>
+      <p class="site-role">Research Assistant<br>Robotics &amp; Computer Vision</p>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="docs/CV/">CV</a>
+      </nav>
+
+      <div class="menu-contact">
+        <a href="mailto:dangdinh1713@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=DEIog-oAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://github.com/dangdinh17">GitHub</a>
+      </div>
+    </aside>
+
+    <main id="main-content" class="site-content">
+      <section id="home" class="profile-section" aria-labelledby="page-title">
+        <div class="profile-copy">
+          <p class="eyebrow">Academic Homepage</p>
+          <h1 id="page-title">Dang Bui Dinh</h1>
+          <p class="lead">Research Assistant in the Department of Robotics Engineering at VNU University of Engineering and Technology.</p>
+
+          <p>
+            My research focuses on artificial intelligence, deep learning, computer vision, image and video enhancement, and efficient visual systems.
+          </p>
+
+          <div class="profile-links" aria-label="Profile links">
+            <a href="mailto:dangdinh1713@gmail.com">Email</a>
+            <span aria-hidden="true">/</span>
+            <a href="https://github.com/dangdinh17">GitHub</a>
+            <span aria-hidden="true">/</span>
+            <a href="https://scholar.google.com/citations?user=DEIog-oAAAAJ&amp;hl=en">Google Scholar</a>
+            <span aria-hidden="true">/</span>
+            <a href="docs/CV/">CV</a>
+          </div>
         </div>
-    </nav>
 
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('docs/static/assets/img/UET.jpg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
-            </div>
+        <figure class="profile-photo">
+          <img src="docs/static/assets/img/photo.jpg" alt="Portrait of Dang Bui Dinh" width="900" height="1200">
+        </figure>
+      </section>
+
+      <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+
+        <div class="two-column">
+          <div>
+            <h3>Research Interests</h3>
+            <ul class="compact-list">
+              <li>Artificial Intelligence &amp; Deep Learning</li>
+              <li>Computer Vision &amp; Machine Vision</li>
+              <li>Image Super-Resolution</li>
+              <li>Low-Light Image Enhancement</li>
+              <li>Video Quality Enhancement &amp; Coding</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Education</h3>
+            <p><strong>B.S.E. in Robotics Engineering</strong><br>VNU University of Engineering and Technology, Vietnam<br><span class="muted">2021–2025</span></p>
+          </div>
         </div>
-    </section>
-    <!-- Top Section -->
+      </section>
 
-    <!-- Photo -->
-    <div class="container px-5">
-        <div id="avatar">
-            <img class="shadow" src="docs/static/assets/img/photo.jpg">
+      <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications &amp; Intellectual Property</h2>
+
+        <article class="publication">
+          <a class="publication-visual" href="docs/imgs/esrpcb_model.png" aria-label="View the ESRPCB model diagram">
+            <img src="docs/imgs/esrpcb_model.png" alt="Architecture of the ESRPCB super-resolution model" loading="lazy">
+          </a>
+          <div class="publication-details">
+            <p class="publication-type">Journal · 2025</p>
+            <h3>ESRPCB: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection</h3>
+            <p>X. Hoang Van, <strong>D. Bui Dinh</strong>, T. N. Canh, and V. T. Nguyen</p>
+            <p><em>Engineering Applications of Artificial Intelligence</em>, vol. 159, 111547.</p>
+            <p class="publication-links"><a href="docs/imgs/esrpcb_model.png">Model</a> <a href="docs/imgs/dfresults.png">Results</a></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-visual" href="docs/imgs/dfresults.png" aria-label="View compressed video enhancement results">
+            <img src="docs/imgs/dfresults.png" alt="Visual comparison of printed circuit board defect detection results" loading="lazy">
+          </a>
+          <div class="publication-details">
+            <p class="publication-type">Conference · 2025</p>
+            <h3>Compressed Video Quality Enhancement: Classifying and Benchmarking over Standards</h3>
+            <p>X. Hoang Van, <strong>D. Bui Dinh</strong>, S. Nguyen Quang, and W.-H. Peng</p>
+            <p><em>2025 International Conference on Advanced Technologies for Communications (ATC)</em>. Accepted.</p>
+          </div>
+        </article>
+
+        <article class="publication publication-patent">
+          <div class="publication-visual patent-mark" aria-hidden="true">
+            <span>VN</span>
+            <strong>PATENT</strong>
+          </div>
+          <div class="publication-details">
+            <p class="publication-type">Patent · 2025</p>
+            <h3>Hệ thống và Phương pháp tạo ảnh Siêu phân giải</h3>
+            <p>X. Hoang Van and <strong>D. Bui Dinh</strong></p>
+            <p>Vietnam Patent Application No. 1-2025-05274. Pending.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="awards" aria-labelledby="awards-title">
+        <h2 id="awards-title">Honors &amp; Awards</h2>
+        <div class="award-row">
+          <time datetime="2025">2025</time>
+          <p><strong>Third Place, Student Research Competition</strong><br><span class="muted">VNU University of Engineering and Technology, Hanoi</span></p>
         </div>
-    </div>
-    <!-- Photo -->
-    
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
-        </div>
-    </section>
-    <!-- Home -->
+      </section>
 
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-
-        </div>
-    </section>
-    <!-- Publications  -->
-
-    <!-- Awards -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
-
-        </div>
-    </section>
-    <!-- Awards -->
-
-
-    <!-- Footer-->
-    <footer class="bg-bottom text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/dangdinh1713">Github</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link" href="https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE">License</a>
-            </div>
-        </div>
-    </footer>
-
+      <footer>
+        <p>© 2025–2026 Dang Bui Dinh.</p>
+        <p>Academic layout inspired by <a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+MathJax</a> and <a href="https://thaoshibe.github.io/">Thao Nguyen’s website</a>.</p>
+      </footer>
+    </main>
+  </div>
 </body>
-
 </html>
