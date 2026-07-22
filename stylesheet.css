@@ -178,6 +178,10 @@ section:not(.intro-section) {
   padding: 2px 8px 13px;
 }
 
+.publication-row[hidden] {
+  display: none !important;
+}
+
 .publication-image {
   display: flex;
   align-items: center;
