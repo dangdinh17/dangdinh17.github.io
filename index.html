@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic homepage of Dang Bui Dinh, a researcher in robotics, computer vision, and image enhancement.">
   <meta name="author" content="Dang Bui Dinh">
-  <meta name="theme-color" content="#173b69">
+  <meta name="theme-color" content="#ffffff">
   <title>Dang Bui Dinh</title>
 
   <link rel="icon" href="docs/static/assets/favicon.ico">
-  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css?v=3">
 
   <script>
     window.MathJax = {
@@ -26,130 +29,105 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="site-shell">
-    <aside class="site-menu" aria-label="Primary navigation">
-      <a class="site-name" href="#home">Dang Bui Dinh</a>
-      <p class="site-role">Research Assistant<br>Robotics &amp; Computer Vision</p>
+  <main id="main-content" class="layout-content">
+    <header class="top-title">
+      <h1>Dang Bui Dinh</h1>
+    </header>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#awards">Awards</a>
-        <a href="docs/CV/">CV</a>
-      </nav>
+    <section id="home" class="intro-section" aria-label="Introduction">
+      <img class="profile-photo" src="docs/static/assets/img/photo.jpg" alt="Portrait of Dang Bui Dinh" width="900" height="1200">
 
-      <div class="menu-contact">
-        <a href="mailto:dangdinh1713@gmail.com">Email</a>
-        <a href="https://scholar.google.com/citations?user=DEIog-oAAAAJ&amp;hl=en">Google Scholar</a>
-        <a href="https://github.com/dangdinh17">GitHub</a>
+      <div class="intro-copy">
+        <p>Hi, I'm Dinh!</p>
+        <p>
+          I am currently a <strong>Research Assistant</strong> in the Department of Robotics Engineering at
+          <a href="https://uet.vnu.edu.vn/">VNU University of Engineering and Technology</a>.
+        </p>
+        <p>
+          My research focuses on artificial intelligence, deep learning, computer vision, image and video enhancement,
+          and efficient visual systems.
+        </p>
+        <p>
+          I am particularly interested in developing practical vision models for image super-resolution,
+          low-light image enhancement, video quality enhancement, and machine vision applications.
+        </p>
+
+        <nav class="profile-links" aria-label="Profile links">
+          <a href="mailto:dangdinh1713@gmail.com">Email</a>
+          <span>/</span>
+          <a href="https://github.com/dangdinh17">GitHub</a>
+          <span>/</span>
+          <a href="https://scholar.google.com/citations?user=DEIog-oAAAAJ&amp;hl=en">Google Scholar</a>
+          <span>/</span>
+          <a href="docs/CV/">Resume/CV</a>
+        </nav>
       </div>
-    </aside>
+    </section>
 
-    <main id="main-content" class="site-content">
-      <section id="home" class="profile-section" aria-labelledby="page-title">
-        <div class="profile-copy">
-          <p class="eyebrow">Academic Homepage</p>
-          <h1 id="page-title">Dang Bui Dinh</h1>
-          <p class="lead">Research Assistant in the Department of Robotics Engineering at VNU University of Engineering and Technology.</p>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p><strong>Position:</strong> Research Assistant – VNU University of Engineering and Technology.</p>
+      <p><strong>Contact:</strong> dangdinh1713 at gmail dot com.</p>
+      <p><strong>Education:</strong> B.S.E. in Robotics Engineering, VNU University of Engineering and Technology, 2021–2025.</p>
+      <p><strong>Research interests:</strong> Artificial Intelligence; Deep Learning; Computer Vision; Machine Vision; Image Super-Resolution; Low-Light Image Enhancement; Video Quality Enhancement; Video Coding.</p>
+    </section>
 
-          <p>
-            My research focuses on artificial intelligence, deep learning, computer vision, image and video enhancement, and efficient visual systems.
-          </p>
+    <section id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
 
-          <div class="profile-links" aria-label="Profile links">
-            <a href="mailto:dangdinh1713@gmail.com">Email</a>
-            <span aria-hidden="true">/</span>
-            <a href="https://github.com/dangdinh17">GitHub</a>
-            <span aria-hidden="true">/</span>
-            <a href="https://scholar.google.com/citations?user=DEIog-oAAAAJ&amp;hl=en">Google Scholar</a>
-            <span aria-hidden="true">/</span>
-            <a href="docs/CV/">CV</a>
-          </div>
+      <article class="publication-row">
+        <a class="publication-image" href="docs/imgs/esrpcb_model.png" aria-label="View the ESRPCB model diagram">
+          <img src="docs/imgs/esrpcb_model.png" alt="Architecture of the ESRPCB super-resolution model" loading="lazy">
+        </a>
+        <div class="publication-copy">
+          <h3>ESRPCB: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection</h3>
+          <p>X. Hoang Van, <strong>D. Bui Dinh</strong>, T. N. Canh, and V. T. Nguyen</p>
+          <p><em>Engineering Applications of Artificial Intelligence</em>, 159, 111547, 2025.</p>
+          <p class="paper-links">[<a href="docs/imgs/esrpcb_model.png">Model</a>, <a href="docs/imgs/dfresults.png">Results</a>]</p>
         </div>
+      </article>
 
-        <figure class="profile-photo">
-          <img src="docs/static/assets/img/photo.jpg" alt="Portrait of Dang Bui Dinh" width="900" height="1200">
-        </figure>
-      </section>
-
-      <section id="research" aria-labelledby="research-title">
-        <h2 id="research-title">Research</h2>
-
-        <div class="two-column">
-          <div>
-            <h3>Research Interests</h3>
-            <ul class="compact-list">
-              <li>Artificial Intelligence &amp; Deep Learning</li>
-              <li>Computer Vision &amp; Machine Vision</li>
-              <li>Image Super-Resolution</li>
-              <li>Low-Light Image Enhancement</li>
-              <li>Video Quality Enhancement &amp; Coding</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Education</h3>
-            <p><strong>B.S.E. in Robotics Engineering</strong><br>VNU University of Engineering and Technology, Vietnam<br><span class="muted">2021–2025</span></p>
-          </div>
+      <article class="publication-row">
+        <a class="publication-image" href="docs/imgs/dfresults.png" aria-label="View experiment results">
+          <img src="docs/imgs/dfresults.png" alt="Visual comparison of printed circuit board defect detection results" loading="lazy">
+        </a>
+        <div class="publication-copy">
+          <h3>Compressed Video Quality Enhancement: Classifying and Benchmarking over Standards</h3>
+          <p>X. Hoang Van, <strong>D. Bui Dinh</strong>, S. Nguyen Quang, and W.-H. Peng</p>
+          <p><em>2025 International Conference on Advanced Technologies for Communications (ATC)</em>. Accepted.</p>
         </div>
-      </section>
+      </article>
+    </section>
 
-      <section id="publications" aria-labelledby="publications-title">
-        <h2 id="publications-title">Publications &amp; Intellectual Property</h2>
-
-        <article class="publication">
-          <a class="publication-visual" href="docs/imgs/esrpcb_model.png" aria-label="View the ESRPCB model diagram">
-            <img src="docs/imgs/esrpcb_model.png" alt="Architecture of the ESRPCB super-resolution model" loading="lazy">
-          </a>
-          <div class="publication-details">
-            <p class="publication-type">Journal · 2025</p>
-            <h3>ESRPCB: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection</h3>
-            <p>X. Hoang Van, <strong>D. Bui Dinh</strong>, T. N. Canh, and V. T. Nguyen</p>
-            <p><em>Engineering Applications of Artificial Intelligence</em>, vol. 159, 111547.</p>
-            <p class="publication-links"><a href="docs/imgs/esrpcb_model.png">Model</a> <a href="docs/imgs/dfresults.png">Results</a></p>
-          </div>
-        </article>
-
-        <article class="publication">
-          <a class="publication-visual" href="docs/imgs/dfresults.png" aria-label="View compressed video enhancement results">
-            <img src="docs/imgs/dfresults.png" alt="Visual comparison of printed circuit board defect detection results" loading="lazy">
-          </a>
-          <div class="publication-details">
-            <p class="publication-type">Conference · 2025</p>
-            <h3>Compressed Video Quality Enhancement: Classifying and Benchmarking over Standards</h3>
-            <p>X. Hoang Van, <strong>D. Bui Dinh</strong>, S. Nguyen Quang, and W.-H. Peng</p>
-            <p><em>2025 International Conference on Advanced Technologies for Communications (ATC)</em>. Accepted.</p>
-          </div>
-        </article>
-
-        <article class="publication publication-patent">
-          <div class="publication-visual patent-mark" aria-hidden="true">
-            <span>VN</span>
-            <strong>PATENT</strong>
-          </div>
-          <div class="publication-details">
-            <p class="publication-type">Patent · 2025</p>
-            <h3>Hệ thống và Phương pháp tạo ảnh Siêu phân giải</h3>
-            <p>X. Hoang Van and <strong>D. Bui Dinh</strong></p>
-            <p>Vietnam Patent Application No. 1-2025-05274. Pending.</p>
-          </div>
-        </article>
-      </section>
-
-      <section id="awards" aria-labelledby="awards-title">
-        <h2 id="awards-title">Honors &amp; Awards</h2>
-        <div class="award-row">
-          <time datetime="2025">2025</time>
-          <p><strong>Third Place, Student Research Competition</strong><br><span class="muted">VNU University of Engineering and Technology, Hanoi</span></p>
+    <section id="patent" aria-labelledby="patent-title">
+      <h2 id="patent-title">Patent</h2>
+      <article class="publication-row compact-row">
+        <div class="publication-image patent-image" aria-hidden="true">
+          <span>VN</span>
+          <strong>PATENT</strong>
         </div>
-      </section>
+        <div class="publication-copy">
+          <h3>Hệ thống và Phương pháp tạo ảnh Siêu phân giải</h3>
+          <p>X. Hoang Van and <strong>D. Bui Dinh</strong></p>
+          <p>Vietnam Patent Application No. 1-2025-05274 (pending), 2025.</p>
+        </div>
+      </article>
+    </section>
 
-      <footer>
-        <p>© 2025–2026 Dang Bui Dinh.</p>
-        <p>Academic layout inspired by <a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+MathJax</a> and <a href="https://thaoshibe.github.io/">Thao Nguyen’s website</a>.</p>
-      </footer>
-    </main>
-  </div>
+    <section id="awards" aria-labelledby="awards-title">
+      <h2 id="awards-title">Honors &amp; Awards</h2>
+      <div class="award-row">
+        <span class="award-year">2025</span>
+        <p><strong>Third Place, Student Research Competition</strong><br>VNU University of Engineering and Technology, Hanoi.</p>
+      </div>
+    </section>
+
+    <footer>
+      You've reached the end. This website follows the academic format of
+      <a href="https://thaoshibe.github.io/">Thao Nguyen's website</a> and is modified from
+      <a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+MathJax</a>.
+      Last updated: 22 July 2026.
+    </footer>
+  </main>
 </body>
 </html>
