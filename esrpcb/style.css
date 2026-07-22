@@ -56,14 +56,6 @@ img {
   transform: translateY(0);
 }
 
-.project-nav {
-  width: min(1140px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 18px 0 0;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
 main,
 footer {
   width: min(1140px, calc(100% - 40px));
@@ -71,7 +63,7 @@ footer {
 }
 
 .project-hero {
-  padding: 15px 0 30px;
+  padding: 36px 0 30px;
   text-align: center;
 }
 
@@ -275,14 +267,13 @@ footer p {
 }
 
 @media (max-width: 760px) {
-  .project-nav,
   main,
   footer {
     width: min(100% - 28px, 1140px);
   }
 
   .project-hero {
-    padding-top: 10px;
+    padding-top: 26px;
   }
 
   .authors {
