@@ -88,6 +88,35 @@ h2 {
   line-height: 1;
 }
 
+.publication-filter {
+  color: #9a9a9a;
+  font-size: 0.68rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.publication-filter-button {
+  appearance: none;
+  margin: 0;
+  padding: 0 2px;
+  border: 0;
+  color: #9a9a9a;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.publication-filter-button:hover,
+.publication-filter-button:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.publication-filter-button.is-active {
+  color: var(--link);
+  font-weight: 700;
+}
+
 h3 {
   margin: 0 0 4px;
   color: var(--link);

@@ -73,9 +73,16 @@
     </section>
 
     <section id="publications" aria-labelledby="publications-title">
-      <h2 id="publications-title">Publications</h2>
+      <h2 id="publications-title">
+        Publications
+        <span class="publication-filter" role="group" aria-label="Filter publications">
+          [<button class="publication-filter-button is-active" type="button" data-publication-filter="selected" aria-pressed="true">selected (1)</button>
+          <span aria-hidden="true">|</span>
+          <button class="publication-filter-button" type="button" data-publication-filter="all" aria-pressed="false">all (2)</button>]
+        </span>
+      </h2>
 
-      <article class="publication-row">
+      <article class="publication-row" data-selected-publication="true">
         <a class="publication-image" href="docs/imgs/esrpcb_model.png" aria-label="View the ESRPCB model diagram">
           <img src="docs/imgs/esrpcb_model.png" alt="Architecture of the ESRPCB super-resolution model" loading="lazy">
         </a>
@@ -87,7 +94,7 @@
         </div>
       </article>
 
-      <article class="publication-row">
+      <article class="publication-row" data-selected-publication="false" hidden>
         <a class="publication-image" href="docs/imgs/dfresults.png" aria-label="View experiment results">
           <img src="docs/imgs/dfresults.png" alt="Visual comparison of printed circuit board defect detection results" loading="lazy">
         </a>
@@ -129,5 +136,23 @@
       Last updated: 22 July 2026.
     </footer>
   </main>
+
+  <script>
+    document.querySelectorAll('[data-publication-filter]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.publicationFilter;
+
+        document.querySelectorAll('[data-publication-filter]').forEach((filterButton) => {
+          const isActive = filterButton.dataset.publicationFilter === filter;
+          filterButton.classList.toggle('is-active', isActive);
+          filterButton.setAttribute('aria-pressed', String(isActive));
+        });
+
+        document.querySelectorAll('[data-selected-publication]').forEach((publication) => {
+          publication.hidden = filter === 'selected' && publication.dataset.selectedPublication !== 'true';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
