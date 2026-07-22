@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ESRPCB: edge-guided super-resolution and ensemble learning for tiny printed circuit board defect detection.">
+  <meta name="author" content="Xiem HoangVan, Dang Bui Dinh, Thanh Nguyen Canh, Van-Truong Nguyen">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ESRPCB — Edge-Guided Super-Resolution for PCB Defect Detection">
+  <meta property="og:description" content="A research project combining edge-guided super-resolution, ResCat, and ensemble learning for tiny PCB defect detection.">
+  <meta property="og:image" content="https://dangdinh17.github.io/docs/esrpcb/imgs/esrpcb_model.png">
+
+  <title>ESRPCB | Project Page</title>
+
+  <link rel="icon" href="../static/assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <a href="../../">← Dang Bui Dinh</a>
+  </nav>
+
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">ESR<span>PCB</span></div>
+      <h1>ESRPCB</h1>
+      <p class="subtitle">An Edge-Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection</p>
+      <p class="venue">Engineering Applications of Artificial Intelligence · 2025</p>
+
+      <div class="authors" aria-label="Authors">
+        <a href="https://scholar.google.com/citations?user=DEIog-oAAAAJ&amp;hl=en">Dang Bui Dinh</a>
+        <span>Xiem HoangVan</span>
+        <span>Thanh Nguyen Canh</span>
+        <span>Van-Truong Nguyen</span>
+      </div>
+
+      <p class="affiliations">VNU University of Engineering and Technology · Japan Advanced Institute of Science and Technology · Hanoi University of Industry</p>
+
+      <div class="project-links" aria-label="Project resources">
+        <a href="https://doi.org/10.1016/j.engappai.2025.111547">Paper</a>
+        <a href="https://arxiv.org/abs/2506.13476">arXiv</a>
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </div>
+
+      <p class="tagline">Enhancing tiny PCB defect detection by recovering structural detail before recognition.</p>
+    </header>
+
+    <figure class="hero-figure">
+      <img src="imgs/esrpcb_model.png" alt="Overview of the ESRPCB edge-guided super-resolution architecture">
+      <figcaption>ESRPCB integrates edge information and ResCat blocks to reconstruct detail that is important for detecting tiny defects.</figcaption>
+    </figure>
+
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>
+        Tiny defects in low-resolution printed circuit board images can be difficult to distinguish from noise.
+        ESRPCB addresses this problem by combining an edge-guided super-resolution network with ensemble defect detection.
+        The super-resolution stage uses structural edge information and a Residual Concatenation (ResCat) design to recover
+        high-frequency detail, while the detection stage combines complementary predictions to improve robustness across defect types.
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>Edge-Guided Reconstruction</h3>
+          <p>Edge features guide super-resolution toward boundaries and small structural details that matter for PCB inspection.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>ResCat Architecture</h3>
+          <p>Residual concatenation combines local and global information while preserving a direct path for image reconstruction.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Ensemble Detection</h3>
+          <p>Multiple detector outputs are fused to reduce missed defects and produce more reliable final predictions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">
+        The framework first reconstructs a high-resolution PCB image with edge-aware super-resolution, then applies ensemble learning to localize tiny defects.
+      </p>
+      <figure class="wide-figure">
+        <img src="imgs/esrpcb_model.png" alt="Detailed ESRPCB model showing edge extraction, ResCat blocks, residual learning, and upscaling">
+      </figure>
+    </section>
+
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Qualitative Results</h2>
+      <p class="section-intro">
+        The examples compare individual detectors and fusion strategies across six PCB defect categories, including missing hole, mouse bite, open circuit, short, spur, and spurious copper.
+      </p>
+      <figure class="wide-figure">
+        <img src="imgs/dfresults.png" alt="Qualitative PCB defect detection results across individual detectors and ensemble fusion strategies">
+      </figure>
+    </section>
+
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@article{hoangvan2025esrpcb,
+  title   = {ESRPCB: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection},
+  author  = {HoangVan, Xiem and Dinh, Dang Bui and Canh, Thanh Nguyen and Nguyen, Van-Truong},
+  journal = {Engineering Applications of Artificial Intelligence},
+  volume  = {159},
+  pages   = {111547},
+  year    = {2025},
+  doi     = {10.1016/j.engappai.2025.111547}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>ESRPCB project page · 2025</p>
+    <p>Project-page structure inspired by <a href="https://thaoshibe.github.io/YoChameleon/">Yo'Chameleon</a>.</p>
+  </footer>
+</body>
+</html>

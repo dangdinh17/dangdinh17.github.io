@@ -11,6 +11,7 @@ The website presents my research interests, publications, patent, honors, and cu
 - `index.html` — homepage content and metadata
 - `stylesheet.css` — responsive academic layout and visual styling
 - `docs/CV/` — curriculum vitae
+- `docs/esrpcb/` — ESRPCB research project page
 - `docs/imgs/` — publication figures
 - `docs/static/assets/` — profile image and site assets
 
