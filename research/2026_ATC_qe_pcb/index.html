@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jointly restoring resolution and compression artifacts for industrial machine vision.">
+  <meta name="author" content="Dang BuiDinh, Sang NguyenQuang, Anh NguyenPhuong, Wen-Hsiao Peng, Xiem HoangVan">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="End-to-End Joint Training of Super-Resolution and Compression Artifact Removal for Industrial Machine Vision">
+  <meta property="og:description" content="Jointly restoring resolution and compression artifacts for industrial machine vision.">
+  <meta property="og:url" content="https://dangdinh17.github.io/research/2026_ATC_qe_pcb/">
+  <meta property="og:image" content="https://dangdinh17.github.io/research/2026_ATC_qe_pcb/images/teaser.webp">
+  <meta property="og:image:alt" content="Separate restoration pipelines compared with the proposed jointly trained super-resolution and compression artifact removal approach.">
+  <title>Joint QE | Project Page</title>
+  <link rel="canonical" href="https://dangdinh17.github.io/research/2026_ATC_qe_pcb/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">Joint QE</div>
+      <h1>Joint QE</h1>
+      <p class="subtitle">End-to-End Joint Training of Super-Resolution and Compression Artifact Removal for Industrial Machine Vision</p>
+      <p class="venue">International Conference on Advanced Technologies for Communications (ATC) · 2026</p>
+      <div class="authors" aria-label="Authors">
+        <span><a href="../../"><strong>Dang BuiDinh</strong></a><sup>1</sup></span>
+        <span>Sang NguyenQuang<sup>2</sup></span>
+        <span>Anh NguyenPhuong<sup>1</sup></span>
+        <span>Wen-Hsiao Peng<sup>2</sup></span>
+        <span>Xiem HoangVan<sup>1*</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> Faculty of Electronics and Telecommunications, VNU University of Engineering and Technology, Hanoi, Vietnam</p>
+        <p><sup>2</sup> Department of Computer Science, National Yang Ming Chiao Tung University, Taiwan</p>
+        <p>* Corresponding author: Xiem HoangVan.</p>
+      </div>
+      <nav class="project-links" aria-label="Project resources">
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </nav>
+      <p class="tagline">Jointly restoring resolution and compression artifacts for industrial machine vision.</p>
+    </header>
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Images transmitted by industrial edge devices often suffer from both low resolution and compression artifacts. This work jointly trains super-resolution (SR) and compression artifact removal (CAR) for downstream machine vision. The framework compares alternative processing orders and balances human-perception reconstruction losses with machine-perception objectives using fixed and uncertainty-based dynamic weights. Experiments on PCB Defect, DeepPCB, and NEU-DET examine image quality and defect detection under compression, showing the benefit of end-to-end joint optimization over standalone or separately trained pipelines.</p>
+    </section>
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>Joint SR and CAR</h3>
+          <p>An end-to-end quality enhancement framework compares both SR-to-CAR and CAR-to-SR processing orders.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Human and machine objectives</h3>
+          <p>Reconstruction and downstream-task losses are balanced with fixed or uncertainty-based dynamic weights.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Industrial defect evaluation</h3>
+          <p>Experiments cover PCB Defect, DeepPCB, and NEU-DET, with comparisons across compression settings.</p>
+        </article>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">The quality enhancement network receives a downsampled and compressed image, reconstructs an enhanced image, and passes it to a downstream task model. Joint training combines human-perception and machine-perception losses, allowing both SR and CAR components to adapt to defect detection rather than reconstruction alone.</p>
+      <figure class="wide-figure">
+        <a href="images/teaser.webp" aria-label="View full-size figure: Separate restoration pipelines compared with the proposed jointly trained super-resolution and compression artifact removal approach.">
+          <img src="images/teaser.webp" alt="Separate restoration pipelines compared with the proposed jointly trained super-resolution and compression artifact removal approach." width="1044" height="837" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Separate restoration pipelines compared with the proposed jointly trained super-resolution and compression artifact removal approach.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/overall_architecture.webp" aria-label="View full-size figure: End-to-end training pipeline with human- and machine-perception losses, and the separate and joint QE configurations.">
+          <img src="images/overall_architecture.webp" alt="End-to-end training pipeline with human- and machine-perception losses, and the separate and joint QE configurations." width="2200" height="984" loading="lazy" decoding="async">
+        </a>
+        <figcaption>End-to-end training pipeline with human- and machine-perception losses, and the separate and joint QE configurations.</figcaption>
+      </figure>
+    </section>
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">Under severe JPEG compression, the paper reports an increase from 0.461 to 0.887 mAP@50 on PCB Defect relative to a sequential SR-CAR baseline, with a slight reduction in PSNR. The experiments compare quality enhancement configurations across JPEG quality factors and study the effect of balancing reconstruction and machine-perception objectives.</p>
+      <figure class="wide-figure">
+        <a href="images/avg_map.webp" aria-label="View full-size figure: Average mAP@50 of the evaluated quality enhancement configurations on PCB Defect across the tested JPEG quality factors.">
+          <img src="images/avg_map.webp" alt="Average mAP@50 of the evaluated quality enhancement configurations on PCB Defect across the tested JPEG quality factors." width="2200" height="851" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Average mAP@50 of the evaluated quality enhancement configurations on PCB Defect across the tested JPEG quality factors.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/detection-comparison.webp" aria-label="View full-size figure: Defect-detection comparisons on PCB Defect at JPEG QF = 40, reproduced from Figure 4 of the paper.">
+          <img src="images/detection-comparison.webp" alt="Defect-detection comparisons on PCB Defect at JPEG QF = 40, reproduced from Figure 4 of the paper." width="2064" height="476" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Defect-detection comparisons on PCB Defect at JPEG QF = 40, reproduced from Figure 4 of the paper.</figcaption>
+      </figure>
+    </section>
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@inproceedings{2026atcqepcb,
+  title = {End-to-End Joint Training of Super-Resolution and Compression Artifact Removal for Industrial Machine Vision},
+  author = {BuiDinh, Dang and NguyenQuang, Sang and NguyenPhuong, Anh and Peng, Wen-Hsiao and HoangVan, Xiem},
+  booktitle = {International Conference on Advanced Technologies for Communications (ATC)},
+  year = {2026}
+}</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p><a href="../../">Dang Bui Dinh</a> · Joint QE · 2026</p>
+  </footer>
+</body>
+</html>

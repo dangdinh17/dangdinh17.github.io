@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enhancing tiny PCB defect detection by recovering structural detail before recognition.">
+  <meta name="author" content="Xiem HoangVan, Dang Bui Dinh, Thanh Nguyen Canh, Van-Truong Nguyen">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ESRPCB: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection">
+  <meta property="og:description" content="Enhancing tiny PCB defect detection by recovering structural detail before recognition.">
+  <meta property="og:url" content="https://dangdinh17.github.io/research/2025_EAAI_esrpcb/">
+  <meta property="og:image" content="https://dangdinh17.github.io/research/2025_EAAI_esrpcb/images/esrpcb_model.webp">
+  <meta property="og:image:alt" content="ESRPCB architecture with edge extraction, shallow feature extraction, Residual Concatenation blocks, and upscaling.">
+  <title>ESRPCB | Project Page</title>
+  <link rel="canonical" href="https://dangdinh17.github.io/research/2025_EAAI_esrpcb/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">ESRPCB</div>
+      <h1>ESRPCB</h1>
+      <p class="subtitle">ESRPCB: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection</p>
+      <p class="venue">Engineering Applications of Artificial Intelligence · 2025</p>
+      <div class="authors" aria-label="Authors">
+        <span>Xiem HoangVan<sup>1*</sup></span>
+        <span><a href="../../"><strong>Dang Bui Dinh</strong></a><sup>1</sup></span>
+        <span>Thanh Nguyen Canh<sup>1</sup></span>
+        <span>Van-Truong Nguyen<sup>2</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> Faculty of Electronics and Telecommunications, VNU University of Engineering and Technology, Vietnam</p>
+        <p><sup>2</sup> Faculty of Mechatronics, SMAE, Hanoi University of Industry, Vietnam</p>
+        <p>* Corresponding author: Xiem HoangVan.</p>
+      </div>
+      <nav class="project-links" aria-label="Project resources">
+        <a href="https://doi.org/10.1016/j.engappai.2025.111547">Paper</a>
+        <a href="https://arxiv.org/abs/2506.13476">arXiv</a>
+        <a href="https://github.com/dangdinh17/ESRPCB">Code</a>
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </nav>
+      <p class="tagline">Enhancing tiny PCB defect detection by recovering structural detail before recognition.</p>
+    </header>
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>ESRPCB combines edge-guided super-resolution with ensemble learning to improve tiny printed circuit board defect detection. Edge information guides an EDSR-based reconstruction network with Residual Concatenation (ResCat) blocks, helping preserve fine structural details in low-resolution PCB images. The reconstructed images are then processed by defect detectors, and ensemble fusion combines their predictions. Experiments evaluate reconstruction quality and detection accuracy, demonstrating the benefit of edge guidance and ensemble learning in low-resolution inspection scenarios.</p>
+    </section>
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>Edge-guided reconstruction</h3>
+          <p>Edge features guide super-resolution toward fine boundaries that matter for PCB defect inspection.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>ResCat architecture</h3>
+          <p>Residual Concatenation blocks combine additive and concatenation connections for feature preservation.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Ensemble defect detection</h3>
+          <p>Fusion of detector predictions further improves tiny PCB defect detection after super-resolution.</p>
+        </article>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">Edge extraction, shallow feature extraction, ResCat blocks, and upscaling reconstruct high-resolution PCB images. Ensemble-based defect detection then combines complementary predictions from the reconstructed images.</p>
+      <figure class="wide-figure">
+        <a href="images/esrpcb_model.webp" aria-label="View full-size figure: ESRPCB architecture with edge extraction, shallow feature extraction, Residual Concatenation blocks, and upscaling.">
+          <img src="images/esrpcb_model.webp" alt="ESRPCB architecture with edge extraction, shallow feature extraction, Residual Concatenation blocks, and upscaling." width="2200" height="1787" loading="lazy" decoding="async">
+        </a>
+        <figcaption>ESRPCB architecture with edge extraction, shallow feature extraction, Residual Concatenation blocks, and upscaling.</figcaption>
+      </figure>
+    </section>
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">ESRPCB reports an average PSNR of 30.54 dB, an improvement of 0.42 dB over EDSR. The paper reports mAP50 of 0.965 for ESRPCB-based detection and 0.977 with the ensemble approach. The visual examples compare common PCB defects, including missing hole, mouse bite, open circuit, short, spur, and spurious copper.</p>
+      <figure class="wide-figure">
+        <a href="images/dfresults.webp" aria-label="View full-size figure: Qualitative defect-detection comparisons across detector and fusion configurations.">
+          <img src="images/dfresults.webp" alt="Qualitative defect-detection comparisons across detector and fusion configurations." width="2200" height="2188" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Qualitative defect-detection comparisons across detector and fusion configurations.</figcaption>
+      </figure>
+    </section>
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@article{2025eaaiesrpcb,
+  title = {{ESRPCB}: An Edge Guided Super-Resolution Model and Ensemble Learning for Tiny Printed Circuit Board Defect Detection},
+  author = {HoangVan, Xiem and Dinh, Dang Bui and Canh, Thanh Nguyen and Nguyen, Van-Truong},
+  journal = {Engineering Applications of Artificial Intelligence},
+  year = {2025},
+  volume = {159},
+  pages = {111547},
+  doi = {10.1016/j.engappai.2025.111547}
+}</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p><a href="../../">Dang Bui Dinh</a> · ESRPCB · 2025</p>
+  </footer>
+</body>
+</html>

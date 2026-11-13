@@ -1,0 +1,7 @@
+
+# Keep source paper figures and manuscripts local.
+/research/**/figures/
+/research/**/figure/
+/research/**/paper/
+/research/**/papers/
+/research/**/*.[pP][dD][fF]

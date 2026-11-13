@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Combining prediction signals, temporal context, and frequency information for VVC video enhancement.">
+  <meta name="author" content="Sang NguyenQuang, Hieu Bui Minh, Dang BuiDinh, Xiem HoangVan">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MDFI: A Multi-Domain Features Integration for Compressed Video Quality Enhancement">
+  <meta property="og:description" content="Combining prediction signals, temporal context, and frequency information for VVC video enhancement.">
+  <meta property="og:url" content="https://dangdinh17.github.io/research/2026_TCE_mdfi/">
+  <meta property="og:image" content="https://dangdinh17.github.io/research/2026_TCE_mdfi/images/teaser.webp">
+  <meta property="og:image:alt" content="PSNR comparison and information used by TGAF, TVQE, OVQE, and MDFI.">
+  <title>MDFI | Project Page</title>
+  <link rel="canonical" href="https://dangdinh17.github.io/research/2026_TCE_mdfi/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">MDFI</div>
+      <h1>MDFI</h1>
+      <p class="subtitle">MDFI: A Multi-Domain Features Integration for Compressed Video Quality Enhancement</p>
+      <p class="venue">IEEE Transactions on Consumer Electronics · 2026</p>
+      <div class="authors" aria-label="Authors">
+        <span>Sang NguyenQuang<sup>1</sup></span>
+        <span>Hieu Bui Minh<sup>2</sup></span>
+        <span><a href="../../"><strong>Dang BuiDinh</strong></a><sup>2</sup></span>
+        <span>Xiem HoangVan<sup>2*</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> Department of Computer Science, National Yang Ming Chiao Tung University, Taiwan</p>
+        <p><sup>2</sup> Faculty of Electronics and Telecommunications, VNU University of Engineering and Technology, Vietnam</p>
+        <p>* Corresponding author: Xiem HoangVan.</p>
+      </div>
+      <nav class="project-links" aria-label="Project resources">
+        <a href="https://doi.org/10.1109/TCE.2026.3725873">Paper</a>
+        <a href="https://github.com/dangdinh17/MDFI">Code</a>
+        <a href="https://www.kaggle.com/datasets/dangdinh123/mdfi-dataset">Dataset</a>
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </nav>
+      <p class="tagline">Combining prediction signals, temporal context, and frequency information for VVC video enhancement.</p>
+    </header>
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>MDFI enhances H.266/VVC compressed video by integrating prediction information from the bitstream with spatiotemporal and frequency-domain features. A Frame-Prediction Feature Transform (FPFT) module processes prediction signals before multi-domain fusion, allowing the model to exploit information beyond decoded frames. A dedicated dataset pairs raw video with reconstructed sequences and prediction frames at multiple quantization levels. Experiments evaluate reconstruction quality, temporal consistency, rate-distortion performance, and computational complexity against existing video enhancement methods.</p>
+    </section>
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>Prediction-aware enhancement</h3>
+          <p>The FPFT module transforms compressed-domain prediction information into features for video restoration.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Multi-domain integration</h3>
+          <p>A multi-recursive propagation architecture fuses prediction, spatiotemporal, and frequency-domain features.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Dataset and evaluation</h3>
+          <p>Raw, reconstructed, and prediction sequences support training and evaluation of VVC enhancement methods.</p>
+        </article>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">Prediction information extracted from the VVC bitstream is transformed by FPFT and integrated with reconstructed frames. Spatiotemporal feature fusion and global multi-frequency processing exploit complementary signals before the final quality enhancement stage.</p>
+      <figure class="wide-figure">
+        <a href="images/architecture_new.webp" aria-label="View full-size figure: Overview of the MDFI architecture, including the Frame-Prediction Feature Transform and multi-domain fusion.">
+          <img src="images/architecture_new.webp" alt="Overview of the MDFI architecture, including the Frame-Prediction Feature Transform and multi-domain fusion." width="2200" height="875" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Overview of the MDFI architecture, including the Frame-Prediction Feature Transform and multi-domain fusion.</figcaption>
+      </figure>
+    </section>
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">At QP = 37, MDFI reports an average PSNR improvement of 0.85 dB over decoded VVC video on the standard test sequences. The experiments also examine frame-level consistency, rate-distortion performance, and the trade-off between enhancement quality and model complexity.</p>
+      <figure class="wide-figure">
+        <a href="images/teaser.webp" aria-label="View full-size figure: PSNR comparison and information used by TGAF, TVQE, OVQE, and MDFI.">
+          <img src="images/teaser.webp" alt="PSNR comparison and information used by TGAF, TVQE, OVQE, and MDFI." width="2200" height="1420" loading="lazy" decoding="async">
+        </a>
+        <figcaption>PSNR comparison and information used by TGAF, TVQE, OVQE, and MDFI.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/rd_curve.webp" aria-label="View full-size figure: Rate-distortion comparisons for Traffic, BQMall, BlowingBubbles, and FourPeople, as labeled in the source figure.">
+          <img src="images/rd_curve.webp" alt="Rate-distortion comparisons for Traffic, BQMall, BlowingBubbles, and FourPeople, as labeled in the source figure." width="2200" height="1606" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Rate-distortion comparisons for Traffic, BQMall, BlowingBubbles, and FourPeople, as labeled in the source figure.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/complexity_comparison.webp" aria-label="View full-size figure: Trade-off between reconstruction quality improvement and model complexity.">
+          <img src="images/complexity_comparison.webp" alt="Trade-off between reconstruction quality improvement and model complexity." width="2200" height="1114" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Trade-off between reconstruction quality improvement and model complexity.</figcaption>
+      </figure>
+    </section>
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@article{2026tcemdfi,
+  title = {{MDFI}: A Multi-Domain Features Integration for Compressed Video Quality Enhancement},
+  author = {NguyenQuang, Sang and Minh, Hieu Bui and BuiDinh, Dang and HoangVan, Xiem},
+  journal = {IEEE Transactions on Consumer Electronics},
+  year = {2026}
+}</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p><a href="../../">Dang Bui Dinh</a> · MDFI · 2026</p>
+  </footer>
+</body>
+</html>

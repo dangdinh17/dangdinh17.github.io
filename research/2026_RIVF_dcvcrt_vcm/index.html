@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Adapting a practical variable-rate codec to preserve information for object detection.">
+  <meta name="author" content="Dang BuiDinh, Truong VuXuan, Duy PhamThe, An NguyenThanh, Xiem HoangVan, Minh DoNgoc">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Task-Oriented Variable-Rate DCVC-RT for Object Detection">
+  <meta property="og:description" content="Adapting a practical variable-rate codec to preserve information for object detection.">
+  <meta property="og:url" content="https://dangdinh17.github.io/research/2026_RIVF_dcvcrt_vcm/">
+  <meta property="og:image" content="https://dangdinh17.github.io/research/2026_RIVF_dcvcrt_vcm/images/teaser.webp">
+  <meta property="og:image:alt" content="Reconstruction-oriented DCVC-RT and task-oriented DCVC-RT-VCM retain the same variable-rate coding structure.">
+  <title>DCVC-RT-VCM | Project Page</title>
+  <link rel="canonical" href="https://dangdinh17.github.io/research/2026_RIVF_dcvcrt_vcm/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">DCVC-RT-VCM</div>
+      <h1>DCVC-RT-VCM</h1>
+      <p class="subtitle">Task-Oriented Variable-Rate DCVC-RT for Object Detection</p>
+      <p class="venue">RIVF · 2026</p>
+      <div class="authors" aria-label="Authors">
+        <span><a href="../../"><strong>Dang BuiDinh</strong></a><sup>1</sup></span>
+        <span>Truong VuXuan<sup>1</sup></span>
+        <span>Duy PhamThe<sup>1</sup></span>
+        <span>An NguyenThanh<sup>1</sup></span>
+        <span>Xiem HoangVan<sup>1</sup></span>
+        <span>Minh DoNgoc<sup>1*</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> VNU University of Engineering and Technology, Vietnam National University, Hanoi, Vietnam</p>
+        <p>* Corresponding author: Minh DoNgoc.</p>
+      </div>
+      <nav class="project-links" aria-label="Project resources">
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </nav>
+      <p class="tagline">Adapting a practical variable-rate codec to preserve information for object detection.</p>
+    </header>
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>This work adapts DCVC-RT, a practical single-model variable-rate neural video codec, to object detection. Detector-feature supervision jointly adapts the inter-frame coding network and a cloned YOLOv5s frontend, while the intra-frame codec and teacher branch remain frozen. A quality-conditioned rate-task objective retains the native variable-rate mechanism and recurrent coding structure. Fine-tuning requires no detection annotations and adds no semantic bitstream. Evaluation uses actual coded-stream rates on eight SFU-HW-Objects-v1 sequences, with content-dependent gains in rate-detection performance and essentially unchanged codec throughput.</p>
+    </section>
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>Task-oriented adaptation</h3>
+          <p>Detector-feature matching adapts the inter-frame coding path without changing the codec inference topology.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Single-model rate control</h3>
+          <p>A quality-conditioned rate-task objective preserves DCVC-RT’s module-bank-based variable-rate control.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Actual-bitstream evaluation</h3>
+          <p>Detection accuracy and codec throughput are evaluated using coded streams on eight Class-C and Class-D sequences.</p>
+        </article>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">A frozen YOLOv5s teacher provides feature supervision to a cloned detector frontend and the DCVC-RT inter-frame DMC. The intra-frame codec remains fixed. The training objective balances rate and task fidelity using a base quality index while retaining frame-dependent effective quality indices.</p>
+      <figure class="wide-figure">
+        <a href="images/teaser.webp" aria-label="View full-size figure: Reconstruction-oriented DCVC-RT and task-oriented DCVC-RT-VCM retain the same variable-rate coding structure.">
+          <img src="images/teaser.webp" alt="Reconstruction-oriented DCVC-RT and task-oriented DCVC-RT-VCM retain the same variable-rate coding structure." width="2200" height="878" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Reconstruction-oriented DCVC-RT and task-oriented DCVC-RT-VCM retain the same variable-rate coding structure.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/architecture.webp" aria-label="View full-size figure: Training framework: the inter-frame DMC and cloned detector frontend are adapted under the variable-rate rate-task objective.">
+          <img src="images/architecture.webp" alt="Training framework: the inter-frame DMC and cloned detector frontend are adapted under the variable-rate rate-task objective." width="2200" height="1348" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Training framework: the inter-frame DMC and cloned detector frontend are adapted under the variable-rate rate-task objective.</figcaption>
+      </figure>
+    </section>
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">Averaged over eight Class-C and Class-D sequences, DCVC-RT-VCM reports HEVC-anchored BD-rates of -62.7% for mAP@0.5 and -64.6% for mAP@[0.5:0.95], compared with -54.9% and -58.1% for pretrained DCVC-RT. Gains depend on the sequence: the adapted model improves some contents while the pretrained codec remains more favorable on others. Codec-only throughput remains essentially unchanged.</p>
+      <figure class="wide-figure">
+        <a href="images/detection-comparison.webp" aria-label="View full-size figure: Object-detection comparisons on a representative BasketballPass frame, reproduced from Figure 3 of the paper.">
+          <img src="images/detection-comparison.webp" alt="Object-detection comparisons on a representative BasketballPass frame, reproduced from Figure 3 of the paper." width="2080" height="412" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Object-detection comparisons on a representative BasketballPass frame, reproduced from Figure 3 of the paper.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/rate-accuracy.webp" aria-label="View full-size figure: Rate-accuracy comparisons on BQSquare, RaceHorses (Class D), PartyScene, and RaceHorses (Class C), reproduced from Figure 4.">
+          <img src="images/rate-accuracy.webp" alt="Rate-accuracy comparisons on BQSquare, RaceHorses (Class D), PartyScene, and RaceHorses (Class C), reproduced from Figure 4." width="2080" height="388" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Rate-accuracy comparisons on BQSquare, RaceHorses (Class D), PartyScene, and RaceHorses (Class C), reproduced from Figure 4.</figcaption>
+      </figure>
+    </section>
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@inproceedings{2026rivfdcvcrtvcm,
+  title = {Task-Oriented Variable-Rate {DCVC-RT} for Object Detection},
+  author = {BuiDinh, Dang and VuXuan, Truong and PhamThe, Duy and NguyenThanh, An and HoangVan, Xiem and DoNgoc, Minh},
+  booktitle = {RIVF},
+  year = {2026}
+}</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p><a href="../../">Dang Bui Dinh</a> · DCVC-RT-VCM · 2026</p>
+  </footer>
+</body>
+</html>

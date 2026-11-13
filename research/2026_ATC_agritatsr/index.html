@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recovering thermal detail that matters for crop water stress assessment.">
+  <meta name="author" content="Phan NguyenPhu, Minh TranQuang, Sang NguyenQuang, Dang BuiDinh">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AgriTATSR: Agricultural Task-Aware Thermal Super-Resolution for Crop Water Stress Assessment">
+  <meta property="og:description" content="Recovering thermal detail that matters for crop water stress assessment.">
+  <meta property="og:url" content="https://dangdinh17.github.io/research/2026_ATC_agritatsr/">
+  <meta property="og:image" content="https://dangdinh17.github.io/research/2026_ATC_agritatsr/images/proposed_model.webp">
+  <meta property="og:image:alt" content="AgriTATSR architecture: RGB structural guidance and selective physiological gating for thermal super-resolution.">
+  <title>AgriTATSR | Project Page</title>
+  <link rel="canonical" href="https://dangdinh17.github.io/research/2026_ATC_agritatsr/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">AgriTATSR</div>
+      <h1>AgriTATSR</h1>
+      <p class="subtitle">AgriTATSR: Agricultural Task-Aware Thermal Super-Resolution for Crop Water Stress Assessment</p>
+      <p class="venue">International Conference on Advanced Technologies for Communications (ATC) · 2026</p>
+      <div class="authors" aria-label="Authors">
+        <span>Phan NguyenPhu<sup>1†</sup></span>
+        <span>Minh TranQuang<sup>1†</sup></span>
+        <span>Sang NguyenQuang<sup>2</sup></span>
+        <span><a href="../../"><strong>Dang BuiDinh</strong></a><sup>3*</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> Hanoi - Amsterdam High School for the Gifted, Hanoi, Vietnam</p>
+        <p><sup>2</sup> Department of Computer Science, National Yang Ming Chiao Tung University, Taiwan</p>
+        <p><sup>3</sup> VNU University of Engineering and Technology, Hanoi, Vietnam</p>
+        <p>† Equal contribution. * Corresponding author: Dang BuiDinh.</p>
+      </div>
+      <nav class="project-links" aria-label="Project resources">
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </nav>
+      <p class="tagline">Recovering thermal detail that matters for crop water stress assessment.</p>
+    </header>
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>AgriTATSR is an RGB-guided thermal image super-resolution framework for crop water stress assessment. An Attentive Structural Guidance Stream extracts high-frequency priors from RGB imagery, while a Selective Physiological Gating Stream selectively integrates those priors into the thermal reconstruction. Multi-objective supervision balances reconstruction fidelity with downstream Crop Water Stress Index (CWSI) based drought classification. Evaluation on a multi-species greenhouse dataset measures physiological assessment accuracy as well as computational efficiency on desktop and edge hardware.</p>
+    </section>
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>RGB structural guidance</h3>
+          <p>The Attentive Structural Guidance Stream extracts hierarchical high-frequency priors from high-resolution RGB images.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Physiological gating</h3>
+          <p>Efficient Spatial Processing Groups selectively integrate structural cues into the thermal reconstruction stream.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Task-aware supervision</h3>
+          <p>Multi-objective training considers reconstruction quality together with downstream CWSI-based drought classification.</p>
+        </article>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Method</h2>
+      <p class="section-intro">High-resolution RGB guidance and a low-resolution thermal image enter complementary streams. Multi-scale features, spatial gating, and efficient channel attention guide reconstruction while preserving physiologically relevant thermal structure for CWSI estimation.</p>
+      <figure class="wide-figure">
+        <a href="images/proposed_model.webp" aria-label="View full-size figure: AgriTATSR architecture: RGB structural guidance and selective physiological gating for thermal super-resolution.">
+          <img src="images/proposed_model.webp" alt="AgriTATSR architecture: RGB structural guidance and selective physiological gating for thermal super-resolution." width="1620" height="680" loading="lazy" decoding="async">
+        </a>
+        <figcaption>AgriTATSR architecture: RGB structural guidance and selective physiological gating for thermal super-resolution.</figcaption>
+      </figure>
+    </section>
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">On the greenhouse dataset, AgriTATSR achieves an average drought-classification F1-score of 84.03%. The paper compares reconstruction and classification performance with guided super-resolution baselines and evaluates inference efficiency on an NVIDIA RTX 4080 and a Jetson Nano 4GB. In the illustrated Silver Fir (T45) example, AgriTATSR preserves the thermal signals needed to identify drought.</p>
+      <figure class="wide-figure">
+        <a href="images/figure_1.webp" aria-label="View full-size figure: Classification F1-score versus inference efficiency on an NVIDIA RTX 4080; marker size and color encode model complexity.">
+          <img src="images/figure_1.webp" alt="Classification F1-score versus inference efficiency on an NVIDIA RTX 4080; marker size and color encode model complexity." width="1765" height="1191" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Classification F1-score versus inference efficiency on an NVIDIA RTX 4080; marker size and color encode model complexity.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/thermal-cwsi-comparison.webp" aria-label="View full-size figure: Thermal and CWSI map comparisons for Silver Fir (T45), reproduced from Figure 4. D and H denote drought and healthy predictions.">
+          <img src="images/thermal-cwsi-comparison.webp" alt="Thermal and CWSI map comparisons for Silver Fir (T45), reproduced from Figure 4. D and H denote drought and healthy predictions." width="2064" height="1272" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Thermal and CWSI map comparisons for Silver Fir (T45), reproduced from Figure 4. D and H denote drought and healthy predictions.</figcaption>
+      </figure>
+    </section>
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@inproceedings{2026atcagritatsr,
+  title = {{AgriTATSR}: Agricultural Task-Aware Thermal Super-Resolution for Crop Water Stress Assessment},
+  author = {NguyenPhu, Phan and TranQuang, Minh and NguyenQuang, Sang and BuiDinh, Dang},
+  booktitle = {International Conference on Advanced Technologies for Communications (ATC)},
+  year = {2026}
+}</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p><a href="../../">Dang Bui Dinh</a> · AgriTATSR · 2026</p>
+  </footer>
+</body>
+</html>

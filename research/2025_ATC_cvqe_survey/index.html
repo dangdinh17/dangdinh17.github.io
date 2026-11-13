@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Classifying video enhancement methods and comparing their quality-complexity trade-offs across coding standards.">
+  <meta name="author" content="Xiem HoangVan, Dang BuiDinh, Sang NguyenQuang, Wen-Hsiao Peng">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Compressed Video Quality Enhancement: Classifying and Benchmarking over Standards">
+  <meta property="og:description" content="Classifying video enhancement methods and comparing their quality-complexity trade-offs across coding standards.">
+  <meta property="og:url" content="https://dangdinh17.github.io/research/2025_ATC_cvqe_survey/">
+  <meta property="og:image" content="https://dangdinh17.github.io/research/2025_ATC_cvqe_survey/images/flow_diagram.webp">
+  <meta property="og:image:alt" content="End-to-end compressed video quality enhancement flow: encoding, transmission or storage, decoding, and enhancement.">
+  <title>CVQE Survey | Project Page</title>
+  <link rel="canonical" href="https://dangdinh17.github.io/research/2025_ATC_cvqe_survey/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <main id="content">
+    <header class="project-hero">
+      <div class="project-mark" aria-hidden="true">CVQE Survey</div>
+      <h1>CVQE Survey</h1>
+      <p class="subtitle">Compressed Video Quality Enhancement: Classifying and Benchmarking over Standards</p>
+      <p class="venue">International Conference on Advanced Technologies for Communications (ATC) · 2025 · Accepted</p>
+      <div class="authors" aria-label="Authors">
+        <span>Xiem HoangVan<sup>1*</sup></span>
+        <span><a href="../../"><strong>Dang BuiDinh</strong></a><sup>1</sup></span>
+        <span>Sang NguyenQuang<sup>2</sup></span>
+        <span>Wen-Hsiao Peng<sup>2</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> Faculty of Electronics and Telecommunications, VNU University of Engineering and Technology, Hanoi, Vietnam</p>
+        <p><sup>2</sup> Department of Computer Science, National Yang Ming Chiao Tung University, Taiwan</p>
+        <p>* Corresponding author: Xiem HoangVan.</p>
+      </div>
+      <nav class="project-links" aria-label="Project resources">
+        <a href="#bibtex">BibTeX</a>
+        <a href="../../">Homepage</a>
+      </nav>
+      <p class="tagline">Classifying video enhancement methods and comparing their quality-complexity trade-offs across coding standards.</p>
+    </header>
+    <section class="content-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>This survey reviews compressed video quality enhancement (CVQE) across H.264/AVC, H.265/HEVC, and H.266/VVC. It organizes methods by architectural paradigm, coding standard, and use of compressed-domain information. A unified benchmarking framework considers standard test sequences, reconstruction quality, and computational complexity. The analysis connects codec-specific restoration challenges with model design and highlights trade-offs that inform the selection of enhancement methods for different deployment constraints.</p>
+    </section>
+    <section class="content-section" aria-labelledby="contributions-title">
+      <h2 id="contributions-title">Key Contributions</h2>
+      <div class="contribution-grid">
+        <article>
+          <span>01</span>
+          <h3>Structured taxonomy</h3>
+          <p>CVQE methods are organized by architecture, coding standard, and compressed-domain feature use.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Unified benchmarking</h3>
+          <p>Common protocols and test sequences support multi-criteria comparisons of enhancement methods.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Quality-complexity analysis</h3>
+          <p>The review examines reconstruction quality alongside parameter counts and computational requirements.</p>
+        </article>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="method-title">
+      <h2 id="method-title">Taxonomy and Benchmarking</h2>
+      <p class="section-intro">The survey considers single-frame and multi-frame methods, architectural choices such as convolution, attention, and hybrid models, and information available in the compressed domain. Benchmarking compares quality enhancement under standardized coding conditions alongside model parameters and FLOPs.</p>
+      <figure class="wide-figure">
+        <a href="images/flow_diagram.webp" aria-label="View full-size figure: End-to-end compressed video quality enhancement flow: encoding, transmission or storage, decoding, and enhancement.">
+          <img src="images/flow_diagram.webp" alt="End-to-end compressed video quality enhancement flow: encoding, transmission or storage, decoding, and enhancement." width="2064" height="736" loading="lazy" decoding="async">
+        </a>
+        <figcaption>End-to-end compressed video quality enhancement flow: encoding, transmission or storage, decoding, and enhancement.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/overall.webp" aria-label="View full-size figure: Common components of multi-frame CVQE architectures: feature encoding, feature propagation, and residual decoding.">
+          <img src="images/overall.webp" alt="Common components of multi-frame CVQE architectures: feature encoding, feature propagation, and residual decoding." width="500" height="492" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Common components of multi-frame CVQE architectures: feature encoding, feature propagation, and residual decoding.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/survey_over_codec.webp" aria-label="View full-size figure: Distribution of the surveyed CVQE research across video coding standards.">
+          <img src="images/survey_over_codec.webp" alt="Distribution of the surveyed CVQE research across video coding standards." width="2200" height="1100" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Distribution of the surveyed CVQE research across video coding standards.</figcaption>
+      </figure>
+    </section>
+    <section class="content-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p class="section-intro">The H.266/VVC benchmark compares PSNR improvements over compressed video, while the quality-complexity analysis places these gains alongside FLOPs and model size. The survey emphasizes that deployment decisions require considering both reconstruction performance and computational constraints.</p>
+      <figure class="wide-figure">
+        <a href="images/vvc_results.webp" aria-label="View full-size figure: PSNR improvement comparisons for CVQE methods on H.266/VVC compressed video.">
+          <img src="images/vvc_results.webp" alt="PSNR improvement comparisons for CVQE methods on H.266/VVC compressed video." width="1800" height="1200" loading="lazy" decoding="async">
+        </a>
+        <figcaption>PSNR improvement comparisons for CVQE methods on H.266/VVC compressed video.</figcaption>
+      </figure>
+      <figure class="wide-figure">
+        <a href="images/psnr_params_flops.webp" aria-label="View full-size figure: Trade-offs between PSNR improvement, FLOPs, and model parameter counts.">
+          <img src="images/psnr_params_flops.webp" alt="Trade-offs between PSNR improvement, FLOPs, and model parameter counts." width="2200" height="1644" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Trade-offs between PSNR improvement, FLOPs, and model parameter counts.</figcaption>
+      </figure>
+    </section>
+    <section id="bibtex" class="content-section" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre><code>@inproceedings{2025atccvqesurvey,
+  title = {Compressed Video Quality Enhancement: Classifying and Benchmarking over Standards},
+  author = {HoangVan, Xiem and BuiDinh, Dang and NguyenQuang, Sang and Peng, Wen-Hsiao},
+  booktitle = {International Conference on Advanced Technologies for Communications (ATC)},
+  year = {2025}
+}</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p><a href="../../">Dang Bui Dinh</a> · CVQE Survey · 2025</p>
+  </footer>
+</body>
+</html>

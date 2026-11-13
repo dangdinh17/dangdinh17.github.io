@@ -200,10 +200,6 @@ section:not(.intro-section) {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-.publication-row:first-of-type .publication-image img {
   object-fit: contain;
 }
 
@@ -320,3 +316,5 @@ footer a {
     width: 100%;
   }
 }
+
+.publication-copy { min-width: 0; overflow-wrap: anywhere; }

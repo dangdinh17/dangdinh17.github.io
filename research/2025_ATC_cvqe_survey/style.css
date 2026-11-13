@@ -308,3 +308,21 @@ footer p {
     scroll-behavior: auto;
   }
 }
+
+/* Shared publication-page refinements; keep each mini-site self-contained. */
+main { padding-bottom: 8px; }
+h1, .subtitle, .authors { overflow-wrap: anywhere; }
+.project-hero, .content-section, .contribution-grid article { min-width: 0; }
+.authors sup { margin-left: 2px; font-size: 0.7em; }
+.affiliations p { margin: 4px 0; }
+.wide-figure + .wide-figure { margin-top: 24px; }
+.wide-figure img { width: auto; max-width: 100%; height: auto; margin-inline: auto; border-radius: 0; }
+.wide-figure a { display: block; }
+.wide-figure figcaption { max-width: 900px; margin: 12px auto 0; color: var(--muted); font-size: 0.88rem; text-align: center; }
+pre { min-width: 0; max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .venue { font-size: 0.86rem; letter-spacing: 0.04em; }
+  .project-links a { min-width: 80px; padding: 8px 13px; }
+  .wide-figure figcaption { font-size: 0.8rem; }
+  pre { padding: 14px; font-size: 0.78rem; }
+}
